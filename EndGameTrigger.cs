@@ -21,17 +21,20 @@ public class EndGameTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            
+            //makes sure you only win the game if its the 2nd time you've gone up the stairs
             triggerCount += 1;
 
         if(triggerCount <= 1)
             {
+                //triggers the run dont look back text objects fall ontop of player and encourage player to run down stairs away from unknown
                 run.SetActive(true);
                 Invoke("DLBack", 1f);
                 Destroy(run, 3f);
             }
         else if(triggerCount >= 2)
             {
+                //win state called if player steps into unknown after running away
+                //stop scary sounds and heavy heartbeat and reset sky box
                 unknown.Stop();
                 player.Stop();
                 endScreen.SetActive(true);
@@ -39,12 +42,7 @@ public class EndGameTrigger : MonoBehaviour
                 Destroy(unknown.gameObject, 3f);
                 Destroy(particle);
             }
-
-        // FirstPersonController player = other.GetComponent<FirstPersonController>();
-        // player.MoveSpeed /= 2f;
-        // player.RotationSpeed += 3f;
-        // player.SprintSpeed -= 2f;
-
+            //pre-implementation notes and ideas
             //endgame text "Congratulations!"
             //"You Won!"
             //"You stepped into the unknown!"

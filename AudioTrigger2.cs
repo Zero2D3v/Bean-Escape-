@@ -8,7 +8,7 @@ public class AudioTrigger2 : MonoBehaviour
 
     public AudioSource heartbeat;
 
-
+    //2nd trigger in charge of increasing heartbeat and changing sky box
     public SKyBoxController sky;
     private void OnTriggerEnter(Collider other)
     {

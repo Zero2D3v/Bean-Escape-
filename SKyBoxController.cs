@@ -19,7 +19,7 @@ public class SKyBoxController : MonoBehaviour
         mat2Enabled = false;
         mat3Enabled = false;
     }
-
+    //as player ascends stairs, triggers cause the skybox to change, building tension
     public void ChangeSkyBox()
     {
         if (mat1Enabled)

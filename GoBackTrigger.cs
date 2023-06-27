@@ -5,7 +5,7 @@ using UnityEngine;
 public class GoBackTrigger : MonoBehaviour
 {
     public GameObject goBack;
-    // Start is called before the first frame update
+    // triggers the go back falling text objects to direct player back up the stairs towards the unknown
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
